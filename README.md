@@ -1,2 +1,2 @@
-# XMDE
-My spin on making xmonad into a desktop enviroment
+Early stages
+Arch only
