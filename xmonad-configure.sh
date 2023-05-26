@@ -3,6 +3,8 @@ mkdir /home/$(whoami)/.xmonad
 touch /home/$(whoami)/.xmonad/xmonad.hs
 cd /home/$(whoami)/.xmonad
 # Activating a script that writes the config
+cd
+mkdir /home/$(whoami)/.config
 sudo sh XMDE/xmonad-config-write.sh
 # Moving the default image
 cd
