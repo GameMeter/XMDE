@@ -33,5 +33,11 @@ sudo sh /home/$(whoami)/XMDE/SDDM-config-write.sh
 cd 
 cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
+# Ricing the terminal
+cd 
+touch .zshrc
+sudo chsh -s /bin/zsh
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+sudo sh /home/$(whoami)/XMDE/zshrc-config-write.sh
 # Making a flash of the system
 timeshift --create
