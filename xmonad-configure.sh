@@ -38,6 +38,6 @@ cd
 touch .zshrc
 sudo chsh -s /bin/zsh
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-sudo sh /home/$(whoami)/XMDE/zshrc-config-write.sh
+zsh
 # Making a flash of the system
 timeshift --create
