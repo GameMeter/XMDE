@@ -33,6 +33,9 @@ sudo sh /home/$(whoami)/XMDE/SDDM-config-write.sh
 cd 
 cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
+# Installing Doom EMACS
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
 # Ricing the terminal
 cd 
 touch .zshrc
