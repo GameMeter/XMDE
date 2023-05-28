@@ -3,7 +3,15 @@
 config_file="xmonad.hs"
 
 cat > "$config_file" << 'EOF'
--- Imports
+--
+-- xmonad example config file.
+--
+-- A template showing all available configuration hooks,
+-- and how to override the defaults in your own xmonad.hs conf file.
+--
+-- Normally, you'd only override those defaults you care about.
+--
+
 import XMonad
 import Data.Monoid
 import System.Exit
@@ -51,7 +59,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#000000"
-myFocusedBorderColor = "#ff0000"
+myFocusedBorderColor = "#cf5c36"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -59,8 +67,10 @@ myFocusedBorderColor = "#ff0000"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn "emacs")
+    [ ((modm .|. shiftMask, xK_Return), spawn "terminator")
 
+    -- launch EMACS
+    , ((modm, xK_e), spawn "emacs")
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
     
@@ -72,6 +82,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Start FireFox
     , ((modm, xK_f), spawn "librewolf")
+
+    -- Start VS codium
+    , ((modm, xK_v), spawn "vscodium")
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
@@ -106,10 +119,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --, ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
 
     -- Shrink the master area
-    , ((modm,               xK_w     ), sendMessage Shrink)
+    , ((modm,               xK_s     ), sendMessage Shrink)
 
     -- Expand the master area
-    , ((modm,               xK_e     ), sendMessage Expand)
+    , ((modm,               xK_w     ), sendMessage Expand)
 
     -- Push window back into tiling
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
@@ -250,7 +263,7 @@ myLogHook = return ()
 myStartupHook = do
 	spawnOnce "polkit-kde-agent &"
 	spawnOnce "nitrogen --restore &"
-	spawnOnce "picom --config /home/$(whoami)/.config/picom/picom.conf"
+	spawnOnce "picom --config /home/$(whoami)/.config/picom/picom.conf &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
