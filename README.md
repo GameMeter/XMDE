@@ -4,8 +4,9 @@ XMonad
 To get my build of XMDE you need to get
 
 Dependencies:
-git
-paru 
-Internet Connection
-Computer
-storage
+
+1) git
+2) paru 
+3) Internet Connection
+4) Computer
+5) storage
