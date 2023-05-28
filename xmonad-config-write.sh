@@ -24,7 +24,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "terminator"
+myTerminal      = "go-to-the-shortcuts-section-for-changing-the-terminal-emulator-default"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -67,7 +67,7 @@ myFocusedBorderColor = "#cf5c36"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn "terminator")
+    [ ((modm .|. shiftMask, xK_Return), spawn "termite")
 
     -- launch EMACS
     , ((modm, xK_e), spawn "emacs")
