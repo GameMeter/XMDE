@@ -33,14 +33,10 @@ sudo sh /home/$(whoami)/XMDE/SDDM-config-write.sh
 cd 
 cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
-# Installing Doom EMACS
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
-# Ricing the terminal
-cd 
-touch .zshrc
-sudo chsh -s /bin/zsh
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-zsh
+# Configuring Termite
+cd
+mkdir .config/termite
+sh termite-config-write.sh
+mv config .config/termite/
 # Making a flash of the system
 timeshift --create
