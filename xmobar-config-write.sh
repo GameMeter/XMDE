@@ -1,9 +1,9 @@
 echo '
 Config { font = "monospace:size=1:antialiasing=true:hinting=true"
        , additionalFonts = []
-       , bgColor = "#000035"
-       , fgColor = "#888b8d"
-       , borderColor = "#000035"
+       , bgColor = "#000000"
+       , fgColor = "#000000"
+       , borderColor = "#000000"
        , border = TopB
        , alpha = 255
        , position = Top
@@ -24,7 +24,7 @@ Config { font = "monospace:size=1:antialiasing=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<fc=#b77729>%cpu%</fc>  <fc=#b7778f>%memory%</fc>   <fc=#ff6e31>%swap%</fc>  }\
-               Hello     \{  <fc=#b680ff>%date%</fc>"
+       , template = "<fc=#b77729>%cpu%</fc>  <fc=#b7778f>%memory%</fc>   <fc=#ff6e31>%swap%</fc>  }\\{  <fc=#b680ff>%date%</fc>"
        }
+
 ' >> xmobarrc
