@@ -71,8 +71,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch EMACS
     , ((modm, xK_e), spawn "emacs")
+    
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "rofi -show drun")
     
     -- Increase volume
     , ((modm .|. shiftMask, xK_i), spawn "pamixer -i 5")
@@ -83,8 +84,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Start FireFox
     , ((modm, xK_f), spawn "librewolf")
 
-    -- Start VS codium
-    , ((modm, xK_v), spawn "vscodium")
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
