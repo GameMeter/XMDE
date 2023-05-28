@@ -5,6 +5,6 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si --noconfirm
 # Installing the packages for my build
-paru -S --noconfirm xorg xorg-xrandr xorg-xinit emacs zsh zsh-theme-powerlevel10k-git librewolf-bin vlc nomacs-git xmonad xmobar qt xmonad-contrib dmenu nitrogen picom-tryone-git pamixer sublime-text-4 timeshift btop neofetch sddm-theme-corners-git sddm 
+paru -S --noconfirm xorg xorg-xrandr xorg-xinit terminater windscribe-v2-bin zsh zsh-theme-powerlevel10k-git librewolf-bin vlc nomacs-git xmonad xmobar qt xmonad-contrib dmenu nitrogen picom-tryone-git pamixer sublime-text-4 timeshift btop neofetch sddm-theme-corners-git sddm 
 # Returning to home directory for stage 2
 cd 
