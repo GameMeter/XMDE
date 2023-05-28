@@ -1,3 +1,2 @@
-attempt to make xmonad like a desktop enviroment
-Early stages
-Arch only
+Hello!, and this is my build of the tiling window manager called 
+XMonad
