@@ -67,7 +67,7 @@ myFocusedBorderColor = "#cf5c36"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn "termite")
+    [ ((modm .|. shiftMask, xK_Return), spawn "alacritty")
 
     -- launch EMACS
     , ((modm, xK_e), spawn "emacs")
