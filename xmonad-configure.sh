@@ -33,10 +33,10 @@ sudo sh /home/$(whoami)/XMDE/SDDM-config-write.sh
 cd 
 cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
-# Configuring Termite
+# Configuring Alacritty
 cd
-mkdir .config/termite
-sh termite-config-write.sh
-mv config .config/termite/
+mkdir .config/alacritty
+sh alacritty-config-write.sh
+mv config .config/alacritty/
 # Making a flash of the system
 timeshift --create
