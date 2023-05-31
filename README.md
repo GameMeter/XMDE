@@ -11,5 +11,9 @@ Dependencies:
 4) Computer
 5) storage
 
+Resources used:
+Wallpaper = vinceliuice grub themes background
+Grub theme = vinceliuice/grub2-themes
+SDDM themes = Sugar dark
 
 (VERY EARLY STAGE, BUGS EXPECTED)
