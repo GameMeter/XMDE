@@ -41,6 +41,10 @@ mkdir .config/alacritty
 sh alacritty-config-write.sh
 mv config .config/alacritty/
 # Setting up conky
+cd
 sh $HOME/XMDE/victorconky/install.sh
+mkdir .config/conky
+sh $HOME/XMDE/conky-config-write.sh
+mv $HOME/conky.conf $HOME/.config/conky/
 # Making a flash of the system
 timeshift --create
