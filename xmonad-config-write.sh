@@ -24,7 +24,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "go-to-the-shortcuts-section-for-changing-the-terminal-emulator-default"
+myTerminal      = "alacritty"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -71,10 +71,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch EMACS
     , ((modm, xK_e), spawn "emacs")
-    
+
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "rofi -show drun")
-    
+
     -- Increase volume
     , ((modm .|. shiftMask, xK_i), spawn "pamixer -i 5")
 
@@ -263,15 +263,14 @@ myStartupHook = do
 	spawnOnce "polkit-kde-agent &"
 	spawnOnce "nitrogen --restore &"
 	spawnOnce "picom --config /home/$(whoami)/.config/picom/picom.conf &"
-
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-	xmproc <- spawnPipe "xmobar -x 0 /home/$(whoami)/.config/xmobar/xmobarrc"
-	xmonad $ docks defaults
+      xmproc <- spawnPipe "conky"
+      xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
