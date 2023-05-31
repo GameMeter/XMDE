@@ -24,7 +24,9 @@ touch /home/$(whoami)/.config/picom/picom.conf
 cd /home/$(whoami)/.config/picom/
 echo "corner-radius = 10;" > picom.conf
 # Install the custom grub bootloader
-sudo sh /home/$(whoami)/XMDE/xenlism-grub-arch-1080p/install.sh
+cd $HOME
+git clone https://github.com/vinceliuice/grub2-themes
+sudo sh $HOME/grub2-themes/install.sh -s 1080p -t vimix
 # Configuring SDDM
 sudo systemctl enable sddm
 sudo rm /usr/lib/sddm/sddm.conf.d/default.conf
