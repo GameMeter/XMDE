@@ -1,5 +1,8 @@
 cd
 # Installing the packages for my build
-paru -S --noconfirm xorg rofi xorg-xrandr conky-manager xorg-xinit alacritty windscribe-v2-bin lxappearance zsh thunar zsh-theme-powerlevel10k-git librewolf vlc nomacs-git xmonad xmobar qt xmonad-contrib dmenu nitrogen picom-tryone-git pamixer timeshift btop neofetch sddm-theme-corners-git sddm orchis-theme-git
+# Builds that require manual intervention
+paru -S windscribe nomacs zsh-theme-powerlevel10k-git librewolf vlc picom-tryone-git timeshift orchis-theme-git oreo-cursors sddm-theme-corners-git wireshark
+# Builds that require no manual intervention
+paru -S --noconfirm xorg rofi xorg-xrandr conky-manager xorg-xinit alacritty lxappearance zsh thunar xmonad qt xmonad-contrib dmenu nitrogen pamixer btop neofetch sddm
 # Returning to home directory for stage 2
 cd 
