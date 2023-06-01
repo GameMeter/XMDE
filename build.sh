@@ -1,7 +1,8 @@
 # Stage 1
-sudo sh /home/$(whoami)/XMDE/applications.sh
+sh $HOME/XMDE/aur-applications.sh
+sudo sh $HOME/XMDE/applications.sh
 # Stage 2
-sh /home/$(whoami)/XMDE/xmonad-configure.sh
+sh $HOME/XMDE/xmonad-configure.sh
 # Stage 3 
 echo "
 
