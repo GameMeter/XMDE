@@ -1,27 +1,26 @@
 # Making the XMonad config directory and file
-mkdir /home/$(whoami)/.xmonad
-touch /home/$(whoami)/.xmonad/xmonad.hs
-cd /home/$(whoami)/.xmonad
+mkdir $HOME/.xmonad
 # Activating a script that writes the config
 cd
-mkdir /home/$(whoami)/.config
+mkdir $HOME/.config
 sudo sh XMDE/xmonad-config-write.sh
+mv $HOME/xmonad.hs $HOME/.xmonad/
 # Moving the default image
 cd
-mkdir /home/$(whoami)/wallpaper
-mv /home/$(whoami)/XMDE/wallpaper/*.png wallpaper/
+mkdir $HOME/wallpaper
+mv $HOME/XMDE/wallpaper/*.png wallpaper/
 # User has to setup nitrogen on their own bcuz its GUI-based
 # Making dir for the xmobar config
-mkdir /home/$(whoami)/.config/xmobar
-touch /home/$(whoami)/.config/xmobar/xmobarrc
-cd /home/$(whoami)/.config/xmobar
+mkdir $HOME/.config/xmobar
+touch $HOME/.config/xmobar/xmobarrc
+cd $HOME/.config/xmobar
 # Executing a script that writes the config
-sh /home/$(whoami)/XMDE/xmobar-config-write.sh
+sh $HOME/XMDE/xmobar-config-write.sh
 # Creating the picom config
 cd
-mkdir /home/$(whoami)/.config/picom
-touch /home/$(whoami)/.config/picom/picom.conf
-cd /home/$(whoami)/.config/picom/
+mkdir $HOME/.config/picom
+touch $HOME/.config/picom/picom.conf
+cd $HOME/.config/picom/
 echo "corner-radius = 10;" > picom.conf
 # Install the custom grub bootloader
 cd $HOME
