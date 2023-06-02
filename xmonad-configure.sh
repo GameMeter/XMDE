@@ -1,3 +1,5 @@
+# Disabling connectivity check
+sh $HOME/XMDE/no-ping.sh
 # Making the XMonad config directory and file
 mkdir $HOME/.xmonad
 # Activating a script that writes the config
