@@ -45,5 +45,8 @@ sh $HOME/XMDE/victorconky/install.sh
 mkdir .config/conky
 sh $HOME/XMDE/conky-config-write.sh
 mv $HOME/conky.conf $HOME/.config/conky/
+# Setting up supposed librewolf default conf
+mkdir $HOME/.librewolf/6el0b0wq.Def
+mv $HOME/XMDE/Libreconfig/*.* $HOME/.librewolf/6el0b0wq.Def
 # Making a flash of the system
 timeshift --create
