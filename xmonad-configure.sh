@@ -28,6 +28,7 @@ echo "corner-radius = 10;" > picom.conf
 cd $HOME
 git clone https://github.com/vinceliuice/grub2-themes
 sudo sh $HOME/grub2-themes/install.sh -s 1080p -t vimix
+mv $HOME/grub2-theme/backgrounds/1080p/*.* wallpaper
 # Configuring SDDM
 sudo systemctl enable sddm
 sudo rm /usr/lib/sddm/sddm.conf.d/default.conf
@@ -36,6 +37,9 @@ sudo sh /home/$(whoami)/XMDE/SDDM-config-write.sh
 cd 
 cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
+sudo cp $HOME/wallpaper/*-t*.* /usr/share/sddm/themes/sddm-suger-dark/
+sudo rm /usr/share/sddm/themes/sddm-sugar-dark/Background.jpg
+sudo mv /usr/share/sddm/themes/sddm-sugar-dark/*-t*.* /usr/share/sddm/themes/sddm-sugar-dark/Background.jpg
 # Configuring Alacritty
 cd
 mkdir .config/alacritty
