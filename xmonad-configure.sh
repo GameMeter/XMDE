@@ -39,8 +39,7 @@ sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
 # Configuring Alacritty
 cd
 mkdir .config/alacritty
-sh alacritty-config-write.sh
-mv config .config/alacritty/
+mv $HOME/XMDE/alacritty.yml .config/alacritty
 # Setting up conky
 cd
 sh $HOME/XMDE/victorconky/install.sh
