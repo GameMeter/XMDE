@@ -1,6 +1,6 @@
 # Stage 1
-sh $HOME/XMDE/aur-applications.sh
 sudo sh $HOME/XMDE/applications.sh
+sh $HOME/XMDE/aur-applications.sh
 # Stage 2
 sh $HOME/XMDE/xmonad-configure.sh
 # Stage 3 
