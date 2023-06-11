@@ -53,6 +53,9 @@ mv $HOME/conky.conf $HOME/.config/conky/
 # Setting up supposed librewolf default conf
 mkdir $HOME/.librewolf/6el0b0wq.Def
 mv $HOME/XMDE/Libreconfig/*.* $HOME/.librewolf/6el0b0wq.Def
+# Customize neofetch
+mkdir $HOME/.config/neofetch
+mv $HOME/XMDE/config.conf $HOME/.config/neofetch/
 # Making a flash of the system
 sudo timeshift --create
 # Finishing touches to the terminal
