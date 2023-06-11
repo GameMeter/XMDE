@@ -54,4 +54,6 @@ mv $HOME/conky.conf $HOME/.config/conky/
 mkdir $HOME/.librewolf/6el0b0wq.Def
 mv $HOME/XMDE/Libreconfig/*.* $HOME/.librewolf/6el0b0wq.Def
 # Making a flash of the system
-timeshift --create
+sudo timeshift --create
+# Finishing touches to the terminal
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
