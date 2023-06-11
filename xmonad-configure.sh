@@ -58,5 +58,12 @@ mkdir $HOME/.config/neofetch
 mv $HOME/XMDE/config.conf $HOME/.config/neofetch/
 # Making a flash of the system
 sudo timeshift --create
+# Configuring Virt Manager
+systemctl start libvirtd
+sudo rm /etc/libvirt/libvirtd.conf
+sudo mv $HOME/XMDE/libvirtd.conf /etc/libvirt/
+sudo gpasswd -a $(whoami) libvirt
+systemctl restart libvirtd
 # Finishing touches to the terminal
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+reboot
