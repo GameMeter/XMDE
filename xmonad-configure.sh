@@ -1,5 +1,8 @@
 # Disabling connectivity check
 sh $HOME/XMDE/no-ping.sh
+# Installing Fonts
+mkdir $HOME/.local/share/fonts
+mv $HOME/XMDE/fonts/*.* $HOME/.local/share/fonts/
 # Making the XMonad config directory and file
 mkdir $HOME/.xmonad
 # Activating a script that writes the config
@@ -27,7 +30,7 @@ echo "corner-radius = 10;" > picom.conf
 # Install the custom grub bootloader
 cd $HOME
 git clone https://github.com/vinceliuice/grub2-themes
-sudo sh $HOME/grub2-themes/install.sh -s 1080p -t vimix
+sudo sh $HOME/grub2-themes/install.sh -s 1080p -t stylish
 mv $HOME/grub2-theme/backgrounds/1080p/*.* wallpaper
 # Configuring SDDM
 sudo systemctl enable sddm
@@ -39,7 +42,7 @@ cd /usr/share/sddm/themes/
 sudo git clone https://github.com/MarianArlt/sddm-sugar-dark
 sudo cp $HOME/wallpaper/*-t*.* /usr/share/sddm/themes/sddm-suger-dark/
 sudo rm /usr/share/sddm/themes/sddm-sugar-dark/Background.jpg
-sudo mv /usr/share/sddm/themes/sddm-sugar-dark/*-t*.* /usr/share/sddm/themes/sddm-sugar-dark/Background.jpg
+sudo mv /usr/share/sddm/themes/sddm-sugar-dark/*-tela.* /usr/share/sddm/themes/sddm-sugar-dark/Background.jpg
 # Configuring Alacritty
 cd
 mkdir .config/alacritty
@@ -51,6 +54,7 @@ mkdir .config/conky
 sh $HOME/XMDE/conky-config-write.sh
 mv $HOME/conky.conf $HOME/.config/conky/
 # Setting up supposed librewolf default conf
+mkdir $HOME/.librewolf
 mkdir $HOME/.librewolf/6el0b0wq.Def
 mv $HOME/XMDE/Libreconfig/*.* $HOME/.librewolf/6el0b0wq.Def
 # Customize neofetch
