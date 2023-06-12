@@ -1,4 +1,3 @@
-echo '
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
@@ -913,4 +912,3 @@ shell:
   # Highlight window damage information.
   #highlight_damage: false
 
-' >> alacritty.yml
