@@ -49,7 +49,10 @@ mkdir .config/alacritty
 mv $HOME/XMDE/alacritty.yml .config/alacritty
 # Setting up conky
 cd
-sh $HOME/XMDE/victorconky/install.sh
+git clone https://github.com/Gictorbit/victorconky
+cd victorconky
+sh install.sh
+cd
 mkdir .config/conky
 sh $HOME/XMDE/conky-config-write.sh
 mv $HOME/conky.conf $HOME/.config/conky/
