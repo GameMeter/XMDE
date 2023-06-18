@@ -16,4 +16,4 @@ Wallpaper = vinceliuice grub themes background
 Grub theme = vinceliuice/grub2-themes
 SDDM themes = Sugar dark
 
-(VERY EARLY STAGE, BUGS EXPECTED)
+(-ABANDONED-)
